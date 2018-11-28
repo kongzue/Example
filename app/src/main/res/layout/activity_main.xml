@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.kongzue.titlebar.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary"
+        app:statusBarTransparentOnlyPadding="true"
+        app:title="首页"></com.kongzue.titlebar.TitleBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!--内容区-->
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#20000000" />
+
+    <com.kongzue.tabbar.TabBarView
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#fff"
+        app:focusColor="#f14961"
+        app:iconPadding="2dp"
+        app:noDyeing="true"
+        app:normalColor="#a2a2a2"
+        app:paddingNavigationBar="true"
+        app:tabClickBackground="ripple"
+        app:tabPaddingVertical="3dp"
+        app:textSize="12dp"/>
+
+</LinearLayout>
