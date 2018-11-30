@@ -15,7 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Layout(R.layout.activity_aim)
-@NavigationBarBackgroundColor(a = 0)
+@NavigationBarBackgroundColor(a = 255,r = 255,g = 255,b = 255)
+@DarkNavigationBarTheme(true)
 public class AimActivity extends BaseActivity {
     
     private TitleBar titlebar;
