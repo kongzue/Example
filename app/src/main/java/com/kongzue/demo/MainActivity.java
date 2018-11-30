@@ -4,12 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.kongzue.baseframework.BaseActivity;
 import com.kongzue.baseframework.interfaces.DarkNavigationBarTheme;
 import com.kongzue.baseframework.interfaces.Layout;
 import com.kongzue.baseframework.interfaces.NavigationBarBackgroundColor;
 import com.kongzue.baseframework.util.JumpParameter;
+import com.kongzue.baseframework.util.OnJumpResponseListener;
 import com.kongzue.tabbar.Tab;
 import com.kongzue.tabbar.TabBarView;
 import com.kongzue.tabbar.interfaces.OnTabChangeListener;
@@ -24,12 +26,14 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
     
     private TitleBar titlebar;
+    private Button btnJumpOnly;
     private TabBarView tabbar;
     
     @Override
     public void initViews() {
         //绑定布局
         titlebar = findViewById(R.id.titlebar);
+        btnJumpOnly = findViewById(R.id.btn_jump_only);
         tabbar = findViewById(R.id.tabbar);
     }
     
@@ -56,6 +60,32 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onTabChanged(View v, int index) {
                 //点击了某个Tab时响应
+                
+            }
+        });
+        
+        btnJumpOnly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jump(AimActivity.class, new JumpParameter()
+                             .put("text", "这是一条消息"), new OnJumpResponseListener() {
+                         @Override
+                         public void OnResponse(JumpParameter jumpParameter) {
+                             //这里的jumpParameter即回传数据
+                             toast(jumpParameter.getString("result"));
+                         }
+                     }
+                );
+    
+                //用默认浏览器打开一个链接
+                //openUrl("http://www.baidu.com");
+                
+                //打开微信
+                //openApp("com.tencent.mm");
+                
+                //前往本软件的系统设置界面
+                //startAppSettings();
+                
                 
             }
         });
