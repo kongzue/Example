@@ -7,9 +7,9 @@
 
 [二、跳转，权限，我闭着眼~（上）](https://www.jianshu.com/p/fb5ff52f0a53)
 
-## 计划
+[二、跳转，权限，我闭着眼~（下）](https://www.jianshu.com/p/862fa4fecd9c)
 
-二、跳转，权限，我闭着眼~（下）
+## 计划
 
 三、玩转对话框
 
