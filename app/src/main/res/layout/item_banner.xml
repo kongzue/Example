@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:indicator_height="7dp"
+        app:indicator_margin="3dp"
+        app:indicator_width="7dp"
+        app:scroll_time="500" />
+
+</LinearLayout>

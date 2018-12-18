@@ -1,4 +1,4 @@
-package com.kongzue.demo;
+package com.kongzue.demo.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import com.kongzue.baseframework.interfaces.DarkNavigationBarTheme;
 import com.kongzue.baseframework.interfaces.Layout;
 import com.kongzue.baseframework.interfaces.NavigationBarBackgroundColor;
 import com.kongzue.baseframework.util.JumpParameter;
+import com.kongzue.demo.R;
 import com.kongzue.titlebar.TitleBar;
 
 import java.util.HashMap;

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kongzue.titlebar.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary"
+        app:noBackButton="true"
+        app:statusBarTransparentOnlyPadding="true"
+        app:title="首页"></com.kongzue.titlebar.TitleBar>
+
+    <com.kongzue.demo.util.views.RefreshView
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_refresher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_refresher" />
+
+            <TextView
+                android:id="@+id/txt_refresher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="下拉刷新"
+                android:textColor="#a5a6ac"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@color/split"
+            android:dividerHeight="1px"
+            android:overScrollMode="never"
+            android:scrollingCache="true"
+            android:animationCache="false"></ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_loadMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_loadmore" />
+
+            <TextView
+                android:id="@+id/txt_loadMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="上拉加载"
+                android:textColor="#a5a6ac"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </com.kongzue.demo.util.views.RefreshView>
+
+</LinearLayout>

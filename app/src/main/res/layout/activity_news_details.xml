@@ -4,29 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context=".activity.AimActivity">
+    tools:context=".activity.NewsDetailsActivity">
 
     <com.kongzue.titlebar.TitleBar
         android:id="@+id/titlebar"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorPrimary"
-        app:title="AimActivity"></com.kongzue.titlebar.TitleBar>
+        app:statusBarTransparentOnlyPadding="true"
+        app:title="详情"></com.kongzue.titlebar.TitleBar>
 
-    <LinearLayout
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@color/white">
-
-        <TextView
-            android:id="@+id/txt_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
+        android:layout_height="match_parent"></WebView>
 
 </LinearLayout>
